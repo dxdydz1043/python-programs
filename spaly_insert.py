@@ -94,20 +94,6 @@ class Splay_tree:
                     self.zig(pos)
                 else:
                     self.zag(pos)
-
-    def search(self,item):
-        ptr=self.root
-        temp=None
-        while ptr!=None:
-            if ptr.data>item:
-                ptr=ptr.left
-            elif ptr.data<item:
-                ptr=ptr.right
-            else:
-                temp=ptr
-                break
-        self.splay(temp)
-        
     
     def insert(self,item):
         if not self.isroot:
